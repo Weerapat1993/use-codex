@@ -13,7 +13,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "prepare": "npm run test && npm run build",
+    "prepare": "npm run build",
     "test": "jest --coverage",
     "release": "standard-version && git push --follow-tags origin master"
   },
@@ -21,10 +21,22 @@
   "license": "ISC",
   "devDependencies": {
     "@types/jest": "^26.0.10",
+    "@types/react": "^16.9.46",
     "codecov": "^3.7.2",
     "jest": "^26.4.0",
+    "rollup": "^2.26.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-peer-deps-external": "^2.2.3",
+    "rollup-plugin-typescript2": "^0.27.2",
     "standard-version": "^9.0.0",
     "ts-jest": "^26.2.0",
     "typescript": "^3.9.7"
+  },
+  "dependencies": {
+    "immer": "^7.0.7",
+    "react": "^16.13.1",
+    "reselect": "^4.0.0",
+    "use-immer": "^0.4.1"
   }
 }

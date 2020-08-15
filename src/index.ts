@@ -1,11 +1,17 @@
-type scream = string;
+// My Library
+import { useDispatch, useSelector, useConsumer, Provider, createSlice, configureStore, querySlice } from './use-codex'
 
-export default function scream(sentence: string): scream {
-  return addExclamationPoints(sentence).toUpperCase();
+const Codex: any = {
+  useDispatch, 
+  useSelector, 
+  useConsumer, 
+  Provider,
+  createSlice, 
+  configureStore, 
+  querySlice,
 }
 
-export function addExclamationPoints(str: string): string {
-  return str
-         .replace(/\?/g, "?!")
-         .replace(/\.$/, "!!!");
-}
+export { createSelector } from 'reselect';
+export { useImmerReducer, useImmer } from 'use-immer';
+
+export default Codex
