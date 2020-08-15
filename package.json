@@ -1,0 +1,27 @@
+{
+  "name": "use-codex",
+  "version": "1.0.0",
+  "description": "Context API Provider for React Hooks",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Weerapat1993/use-codex"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run test && npm run build",
+    "test": "jest --coverage"
+  },
+  "author": "Weerapat Thawatchoketawee <weerapat.thawatchoketawee@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^26.0.10",
+    "jest": "^26.4.0",
+    "ts-jest": "^26.2.0",
+    "typescript": "^3.9.7"
+  }
+}
