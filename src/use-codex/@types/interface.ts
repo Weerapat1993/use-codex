@@ -9,10 +9,6 @@ export interface IAction {
   payload: IActionPayload
 }
 
-export interface IState {
-  [key: string]: any
-}
-
 export interface IActionPayload {
   key?: string
   data?: any

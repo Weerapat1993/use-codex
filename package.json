@@ -1,7 +1,7 @@
 {
   "name": "use-codex",
   "version": "1.0.1",
-  "description": "Context API Provider for React Hooks",
+  "description": "A hook to use Context API as a React hook to state management.",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
@@ -33,6 +33,7 @@
     "ts-jest": "^26.2.0",
     "typescript": "^3.9.7"
   },
+  "keywords": ["react", "hooks", "context", "state", "immer"],
   "dependencies": {
     "immer": "^7.0.7",
     "react": "^16.13.1",

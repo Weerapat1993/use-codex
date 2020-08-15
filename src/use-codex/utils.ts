@@ -1,6 +1,6 @@
 import { createContext } from "react"
 import produce from "immer"
-import { IAction, IState, ICreateSliceConfig, IContextStore, IDispatchStore, IConfigureStore } from './@types/interface'
+import { IAction, ICreateSliceConfig, IContextStore, IDispatchStore, IConfigureStore } from './@types/interface'
 
 export const createSlice = (config: ICreateSliceConfig) => {
   const { name, initialState, reducers } = config
@@ -24,43 +24,6 @@ export const createSlice = (config: ICreateSliceConfig) => {
     reducer,
   }
 }
-
-export const querySlice = (name: string) => createSlice({
-  name,
-  initialState: {
-    keys: {}
-  },
-  reducers: {
-    request: (state: IState, action: IAction) => {
-      const { key } = action.payload
-      if(!state.keys[key]) {
-        state.keys[key] = {};
-      }
-      state.keys[key].loading = true;
-      state.keys[key].isLoaded = false;
-      state.keys[key].error = ''
-    },
-    success: (state: IState, action: IAction) => {
-      const { key, data } = action.payload
-      if(!state.keys[key]) {
-        state.keys[key] = {};
-      }
-      state.keys[key].loading = false;
-      state.keys[key].isLoaded = true;
-      state.keys[key].data = data;
-      state.keys[key].error = ''
-    },
-    failure: (state: IState, action: IAction) => {
-      const { key, error } = action.payload
-      if(!state.keys[key]) {
-        state.keys[key] = {};
-      }
-      state.keys[key].loading = false;
-      state.keys[key].isLoaded = false;
-      state.keys[key].error = error.message;
-    },
-  },
-});
 
 export const configureStore = (config: IConfigureStore) => {
   const { reducer, initialState } = config;

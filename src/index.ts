@@ -1,5 +1,5 @@
 // My Library
-import { useDispatch, useSelector, useConsumer, Provider, createSlice, configureStore, querySlice } from './use-codex'
+import { useDispatch, useSelector, useConsumer, Provider, createSlice, configureStore } from './use-codex'
 
 const Codex: any = {
   useDispatch, 
@@ -8,7 +8,15 @@ const Codex: any = {
   Provider,
   createSlice, 
   configureStore, 
-  querySlice,
+}
+
+export {
+  useDispatch, 
+  useSelector, 
+  useConsumer, 
+  Provider,
+  createSlice, 
+  configureStore, 
 }
 
 export { createSelector } from 'reselect';
