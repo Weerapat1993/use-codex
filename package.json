@@ -9,12 +9,13 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/Weerapat1993/use-codex"
+    "url": "git+https://github.com/Weerapat1993/use-codex.git"
   },
   "scripts": {
     "build": "tsc",
     "prepare": "npm run test && npm run build",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "release": "standard-version && git push --follow-tags origin master"
   },
   "author": "Weerapat Thawatchoketawee <weerapat.thawatchoketawee@gmail.com>",
   "license": "ISC",
