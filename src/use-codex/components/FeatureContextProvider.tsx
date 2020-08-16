@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useImmerReducer } from 'use-immer';
-import { IStoreContext, FeatureContextProviderProps, IContextComposer, IProvider } from '../@types/interface';
+import { IStoreContext, FeatureContextProviderProps, IContextComposer, IProvider, IConfigureStore, IContextStore, IDispatchStore } from '../@types/interface';
 
 const { useContext, createContext, useState } = React
 
@@ -108,9 +108,39 @@ const useConsumer = (reducerName: string) => {
   return [FeatureContext.Consumer, FeatureDispatch.Consumer]
 }
 
+const connect = (mapStateToProps: Function, mapDispatchToProps: Function) => (WrapperComponent: React.FunctionComponent) => {
+  const Connect = (props: any): JSX.Element => {
+    const state = mapStateToProps && typeof mapStateToProps === 'function' ? mapStateToProps(useSelector, props) : {}
+    const dispatch = mapDispatchToProps && typeof mapDispatchToProps === 'function' ? mapDispatchToProps(useDispatch, props) : {}
+    return <WrapperComponent {...state} {...dispatch} {...props} />;
+  }
+  return Connect;
+}
+
+const configureStore = (config: IConfigureStore) => {
+  const { reducer, initialState } = config;
+  const reducerNames = Object.keys(reducer).map(key => key)
+  const ContextStore: IContextStore = {};
+  const DispatchStore: IDispatchStore = {};
+  reducerNames.forEach(name => {
+    ContextStore[name] = createContext(initialState[name]);
+    DispatchStore[name] = createContext({})
+  })
+  const Context = (name: string) => ContextStore[name]
+  const Dispatch = (name: string) => DispatchStore[name]
+  return {
+    Context,
+    Dispatch,
+    initialState,
+    reducer,
+  }
+}
+
 export {
   useSelector,
   useDispatch,
   useConsumer,
+  connect,
+  configureStore,
 }
 
