@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useImmerReducer } from 'use-immer';
-import { IStoreContext, FeatureContextProviderProps, IContextComposer } from '../@types/interface';
+import { IStoreContext, FeatureContextProviderProps, IContextComposer, IProvider } from '../@types/interface';
 
 const { useContext, createContext, useState } = React
 
@@ -19,8 +19,8 @@ export const FeatureContextProvider: React.FunctionComponent<FeatureContextProvi
   const AppDispatchContextProvider = store.Dispatch(name).Provider
   const [state, dispatch] = useImmerReducer(store.reducer[name], store.initialState[name])
   return (
-    <AppContextProvider value={state} displayName={`${name}_context`}>
-      <AppDispatchContextProvider value={dispatch} displayName={`${name}_dispatch_context`} >
+    <AppContextProvider value={state} displayName={`${name}Context`}>
+      <AppDispatchContextProvider value={dispatch} displayName={`${name}DispatchContext`} >
         {children}
       </AppDispatchContextProvider>
     </AppContextProvider>
@@ -66,11 +66,6 @@ const ContextComposer = ({contexts, children}: IContextComposer) => {
   }
 }
 
-interface IProvider {
-  store: IStoreContext
-  children: React.ReactNode
-}
-
 export const Provider = ({ children, store }: IProvider) => {
   const [context] = useState(store);
   const features = Object.keys(store.reducer).map(key => key)
@@ -85,7 +80,6 @@ export const Provider = ({ children, store }: IProvider) => {
 }
 
 Provider.defaultProps = {
-  features: [],
   store: {
     initialState: {},
     reducer: {},

@@ -63,3 +63,8 @@ export interface IContextComposer {
   contexts: Array<JSX.Element>
   children: React.ReactNode
 }
+
+export interface IProvider {
+  store: IStoreContext
+  children: React.ReactNode
+}
