@@ -19,7 +19,6 @@ export {
   configureStore, 
 }
 
-export { createSelector } from 'reselect';
 export { useImmerReducer, useImmer } from 'use-immer';
 
 export default Codex
