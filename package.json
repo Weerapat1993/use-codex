@@ -18,7 +18,7 @@
     "release": "standard-version && git push --follow-tags origin master"
   },
   "author": "Weerapat Thawatchoketawee <weerapat.thawatchoketawee@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@types/jest": "^26.0.10",
     "@types/react": "^16.9.46",
