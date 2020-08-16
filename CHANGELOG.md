@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.1](https://github.com/Weerapat1993/use-codex/compare/version/1.1.0%0Dversion/1.1.1) (2020-08-16)
+
+
+### Bug Fixes
+
+* Remove `yarn.lock` in project ([f49fb5c](https://github.com/Weerapat1993/use-codex/commits/f49fb5c03676ff524aeacf62e52ea98c3d6e2c97))
+* Restructure Code ([ba35271](https://github.com/Weerapat1993/use-codex/commits/ba35271bfa4bb8e0f35abb0f9f3d81889ef180a8))
+
 ## [1.1.0](https://github.com/Weerapat1993/use-codex/compare/version/1.0.2%0Dversion/1.1.0) (2020-08-16)
 
 
