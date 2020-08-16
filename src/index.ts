@@ -1,5 +1,6 @@
 // My Library
-import { useDispatch, useSelector, useConsumer, Provider, createSlice, configureStore, connect } from './use-codex'
+import { useDispatch, useSelector, useConsumer, Provider, configureStore, connect } from './components/FeatureContextProvider'
+import { createSlice } from './createSlice'
 
 const Codex: any = {
   useDispatch, 
