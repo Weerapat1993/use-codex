@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.3](https://github.com/Weerapat1993/use-codex/compare/version/1.1.2%0Dversion/1.1.3) (2020-08-18)
+
+
+### Docs
+
+* Update Table of Content ([e10860b](https://github.com/Weerapat1993/use-codex/commits/e10860b321c8d625f68b07d674e19eb573b33a4f))
+
 ### [1.1.2](https://github.com/Weerapat1993/use-codex/compare/version/1.1.1%0Dversion/1.1.2) (2020-08-17)
 
 
