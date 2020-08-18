@@ -1,7 +1,7 @@
 {
   "name": "use-codex",
   "version": "1.1.2",
-  "description": "A hook to use Context API as a React hook to state management.",
+  "description": "A library for migration from Redux Toolkit to Context API",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
