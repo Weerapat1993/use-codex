@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.4](https://github.com/Weerapat1993/use-codex/compare/version/1.1.3%0Dversion/1.1.4) (2020-08-31)
+
+
+### Bug Fixes
+
+* **File:** decrease file size ([b4138ab](https://github.com/Weerapat1993/use-codex/commits/b4138abe121963c0922f3cf583ef5684a52880ef))
+
 ### [1.1.3](https://github.com/Weerapat1993/use-codex/compare/version/1.1.2%0Dversion/1.1.3) (2020-08-18)
 
 
