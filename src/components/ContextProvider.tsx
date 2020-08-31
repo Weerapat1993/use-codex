@@ -13,8 +13,8 @@ const initialConfigureStore = {
 
 const StoreContext = createContext<IStoreContext>(initialConfigureStore)
 
-// Feature Context Provider
-export const FeatureContextProvider: React.FunctionComponent<FeatureContextProviderProps> = React.memo(({ children, name, store }): JSX.Element => {
+// Context Provider
+const ContextProvider: React.FunctionComponent<FeatureContextProviderProps> = React.memo(({ children, name, store }): JSX.Element => {
   const AppContextProvider = store.Context(name).Provider
   const AppDispatchContextProvider = store.Dispatch(name).Provider
   const [state, dispatch] = useImmerReducer(store.reducer[name], store.initialState[name])
@@ -27,7 +27,7 @@ export const FeatureContextProvider: React.FunctionComponent<FeatureContextProvi
   )
 })
 
-FeatureContextProvider.defaultProps = {
+ContextProvider.defaultProps = {
   name: 'app',
   store: initialConfigureStore,
 }
@@ -66,10 +66,10 @@ const ContextComposer = ({contexts, children}: IContextComposer) => {
   }
 }
 
-export const Provider = ({ children, store }: IProvider) => {
+const Provider = ({ children, store }: IProvider) => {
   const [context] = useState(store);
   const features = Object.keys(store.reducer).map(key => key)
-  const contexts = features.map(name => <FeatureContextProvider store={store} name={name} />)
+  const contexts = features.map(name => <ContextProvider store={store} name={name} />)
   return (
     <StoreContext.Provider value={context}>
       <ContextComposer contexts={contexts}>
@@ -137,6 +137,7 @@ const configureStore = (config: IConfigureStore) => {
 }
 
 export {
+  Provider,
   useSelector,
   useDispatch,
   useConsumer,
