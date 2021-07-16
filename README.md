@@ -29,15 +29,15 @@ The Codex docs are located at [**https://use-codex.netlify.app**](https://use-co
 
 ### Getting Started
 
-* [Introduction](https://use-codex.netlify.app/introduction)
-* [Core Concepts](https://use-codex.netlify.app/introduction/core-concepts)
+- [Introduction](https://use-codex.netlify.app/introduction)
+- [Core Concepts](https://use-codex.netlify.app/introduction/core-concepts)
 
 ### API
 
-* [Provider](https://use-codex.netlify.app/api/Provider)
-* [configureStore](https://use-codex.netlify.app/api/configureStore)
-* [connect](https://use-codex.netlify.app/api/connect)
-* [createSlice](https://use-codex.netlify.app/api/createSlice)
-* [useConsumer](https://use-codex.netlify.app/api/useConsumer)
-* [useDispatch](https://use-codex.netlify.app/api/useConsumer)
-* [useSelector](https://use-codex.netlify.app/api/useSelector)
+- [Provider](https://use-codex.netlify.app/api/Provider)
+- [configureStore](https://use-codex.netlify.app/api/configureStore)
+- [connect](https://use-codex.netlify.app/api/connect)
+- [createSlice](https://use-codex.netlify.app/api/createSlice)
+- [useConsumer](https://use-codex.netlify.app/api/useConsumer)
+- [useDispatch](https://use-codex.netlify.app/api/useConsumer)
+- [useSelector](https://use-codex.netlify.app/api/useSelector)
